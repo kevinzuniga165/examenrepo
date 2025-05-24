@@ -1,5 +1,3 @@
-import 'validaciones.dart';
-
 List<int> obtenerNumerosPrimos(int inicio, int fin) {
   List<int> primos = [];
   for (int n = inicio; n <= fin; n++) {
@@ -19,3 +17,4 @@ bool esPrimo(int numero) {
   }
   return true;
 }
+
