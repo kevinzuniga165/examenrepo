@@ -2,7 +2,8 @@ import 'dart:io';
 import 'operaciones_basicas.dart';
 import 'numeros_primos.dart';
 import 'pares_impares.dart';
-import 'package:examen1/fibonacci.dart';
+// ignore: unused_import
+import 'fibonacci.dart';
 import 'areas_geometricas.dart';
 import 'validaciones.dart';
 import 'utilidades.dart';
@@ -21,7 +22,7 @@ void mostrarMenuPrincipal() {
     print("9. Salir");
     print("===========================================");
     stdout.write("Seleccione una opción (1-9): ");
-
+    int n = 0;
     String? opcion = stdin.readLineSync();
     if (opcion == '9') break;
 
@@ -45,12 +46,13 @@ void mostrarMenuPrincipal() {
         clasificarParesImpares();
         break;
       case '7':
-        generarFibonacci();
+        generarFibonacci(n);
         break;
       case '8':
         calcularAreasGeometricas();
         break;
       default:
+        // ignore: avoid_print
         print("Opción no válida.");
     }
   }
@@ -97,7 +99,7 @@ void clasificarParesImpares() {
   mostrarResultado("Números impares: ${impares.join(', ')}");
 }
 
-void generarFibonacci() {
+void generarFibonacci(int n) {
   stdout.write("¿Cuántos términos desea generar?: ");
   int n = int.parse(stdin.readLineSync()!);
 
@@ -105,9 +107,8 @@ void generarFibonacci() {
     mostrarResultado("Número de términos debe ser mayor que 0.");
     return;
   }
-
   List<int> secuencia = generarFibonacci(n);
-  mostrarResultado("Secuencia de Fibonacci: ${secuencia.join(', ')}");
+  mostrarResultado("Secuencia de Fibonacci: ${secuencia.join(', ')}");
 }
 
 void calcularAreasGeometricas() {
@@ -152,3 +153,4 @@ void calcularAreasGeometricas() {
       mostrarResultado("Opción no válida.");
   }
 }
+
