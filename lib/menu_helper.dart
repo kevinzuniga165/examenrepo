@@ -2,7 +2,8 @@ import 'dart:io';
 import 'operaciones_basicas.dart';
 import 'numeros_primos.dart';
 import 'pares_impares.dart';
-import 'package:examen1/fibonacci.dart';
+// ignore: unused_import
+import 'fibonacci.dart';
 import 'areas_geometricas.dart';
 import 'validaciones.dart';
 import 'utilidades.dart';
@@ -97,7 +98,7 @@ void clasificarParesImpares() {
   mostrarResultado("Números impares: ${impares.join(', ')}");
 }
 
-void generarFibonacci() {
+void generarFibonacci(int n) {
   stdout.write("¿Cuántos términos desea generar?: ");
   int n = int.parse(stdin.readLineSync()!);
 
