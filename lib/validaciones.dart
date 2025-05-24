@@ -5,3 +5,4 @@ bool validarRango(int inicio, int fin) {
 bool validarNumero(double numero) {
   return numero >= 0;
 }
+
